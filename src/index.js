@@ -51,5 +51,5 @@ app.get('/calculator', function(req, res) {
         addition_value: addition_value
     });
 });
-let port = 3000;
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => console.log(`Example app listening at http://localhost:${PORT}`))
