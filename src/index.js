@@ -6,8 +6,11 @@ var app = express();
 app.engine('handlebars', exphbs());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'handlebars');
-
 app.get('/', function(req, res) {
+    res.render('home', {});
+});
+
+app.get('/calculator', function(req, res) {
     let base_value = req.query.base_value;
     let method = req.query.method;
     let addition_value = req.query.addition_value;
@@ -19,9 +22,9 @@ app.get('/', function(req, res) {
             base_value = parseInt(base_value) - parseInt(addition_value);
         } else if (method == '*') {
             base_value = parseInt(base_value) * parseInt(addition_value);
-        }else if (method == '/') {
-        base_value = parseInt(base_value) / parseInt(addition_value);
-    }
+        } else if (method == '/') {
+            base_value = parseInt(base_value) / parseInt(addition_value);
+        }
 
         method = '';
         addition_value = '';
@@ -42,7 +45,7 @@ app.get('/', function(req, res) {
         method = '';
         addition_value = '';
     }
-    res.render('home', {
+    res.render('calculator', {
         base_value: base_value,
         method: method,
         addition_value: addition_value
