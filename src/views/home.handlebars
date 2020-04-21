@@ -1,1 +1,73 @@
-<h1>Example App: Home</h1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div class="container">
+    <h1>Calculator</h1>
+    <form>
+        <div>
+            <div class="row justify-content-md-center">
+                <div class="col col-md-4">
+                    <input type="text" class="form-control" value="{{ base_value }} {{ method }} {{ addition_value }}">
+                    <input type="hidden" class="form-control" name="base_value" value="{{ base_value }}">
+                    <input type="hidden" class="form-control" name="method" value="{{ method }}">
+                    <input type="hidden" class="form-control" name="addition_value" value="{{ addition_value }}">
+                </div>
+            </div>
+            <div class="row justify-content-md-center mt-4">
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="1" class="btn btn-info w-100 py-3">1</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="2" class="btn btn-info w-100 py-3">2</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="3" class="btn btn-info w-100 py-3">3</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="+" class="btn btn-info w-100 py-3">+</button>
+                </div>
+            </div>
+            <div class="row justify-content-md-center mt-1">
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="4" class="btn btn-info w-100 py-3">4</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="5" class="btn btn-info w-100 py-3">5</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="6" class="btn btn-info w-100 py-3">6</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="-" class="btn btn-info w-100 py-3">-</button>
+                </div>
+            </div>
+            <div class="row justify-content-md-center mt-1">
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="7" class="btn btn-info w-100 py-3">7</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="8" class="btn btn-info w-100 py-3">8</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="9" class="btn btn-info w-100 py-3">9</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="*" class="btn btn-info w-100 py-3">*</button>
+                </div>
+            </div>
+            <div class="row justify-content-md-center mt-1">
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="C" class="btn btn-info w-100 py-3">C</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="0" class="btn btn-info w-100 py-3">0</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="=" class="btn btn-info w-100 py-3">=</button>
+                </div>
+                <div class="col col-md-1">
+                    <button type="submit" name="action" value="/" class="btn btn-info w-100 py-3">/</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
